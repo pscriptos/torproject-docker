@@ -1,5 +1,4 @@
 ## Tor Relay Konfiguration – Middle Relay ohne Exit
-## Erstellt für Patrick / techniverse.net
 
 RunAsDaemon 1
 
