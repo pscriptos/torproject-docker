@@ -1,8 +1,6 @@
 # 🧅 Tor Relay mit Privoxy (Docker-basiert)
 
 Dieses Repository stellt eine vollständige Docker-Umgebung bereit, um ein **Tor Relay** mit optionalem HTTP-Proxy via **Privoxy** zu betreiben.  
-Es handelt sich **nicht um einen Exit Node** – der Traffic verlässt in der aktuellen Konfiguration dein Relay niemals in Richtung Internet.  
-Optional kann Privoxy über das Tor-Netzwerk als lokaler HTTP-Proxy verwendet werden.
 
 ---
 
@@ -121,7 +119,7 @@ Privoxy kann als Proxy in Apps oder Browsern genutzt werden:
 ## 📚 Quellen & weiterführende Links
 
 - [Anleitung: Tor-Server in Docker](https://it-service-commander.de/tutorials/docker/tor-server-in-docker-container-auf-dem-vps-installieren/)
-- [Tor-Project](https://git.techniverse.net/scriptos/torproject)
+- [Tor-Project in einer klassischen Installation](https://git.techniverse.net/scriptos/torproject)
 
 ---
 
