@@ -9,7 +9,7 @@ ORPort 9001
 ## === Nickname für dein Relay ===
 Nickname DEIN-NICKNAME
 
-## === Kontaktinfo für Fehlermeldungen (z. B. Abuse Reports) ===
+## === Kontaktinfo für Fehlermeldungen (zum Beispiel Abuse Reports) ===
 ContactInfo Admin <mail@domain.com>
 
 ## === ControlPort: Schnittstelle für Tools wie Nyx / Steuerung ===
@@ -32,5 +32,5 @@ Log notice file /var/log/tor/notices.log
 # === (optional) Wenn du einen DNS-Namen für dein Relay hast ===
 Address relay.domain.com
 
-# === (optional) DataDirectory explizit setzen, sonst Standard (z. B. /var/lib/tor) ===
+# === (optional) DataDirectory explizit setzen, sonst Standard (zum Beispiel /var/lib/tor) ===
 DataDirectory /var/lib/tor
