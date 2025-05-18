@@ -1,0 +1,14 @@
+services:
+  tor-privoxy:
+    image: repo.techniverse.net/docker-hosted/tor-docker:latest
+    container_name: tor-project
+    hostname: tor-project
+    ports:
+      - "9001:9001"
+      - "9030:9030"
+      - "8118:8118"
+    volumes:
+      - ./data:/var/lib/tor
+      - ./config/torrc:/etc/tor/torrc:ro
+      - ./config/privoxy.config:/etc/privoxy/config:ro
+    restart: always

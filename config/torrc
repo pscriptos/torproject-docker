@@ -1,0 +1,36 @@
+## Tor Relay Konfiguration – Middle Relay ohne Exit
+## Erstellt für Patrick / techniverse.net
+
+RunAsDaemon 1
+
+## === ORPort: Annahme eingehender Verbindungen von anderen Relays ===
+ORPort 9001
+
+## === Nickname für dein Relay ===
+Nickname DEIN-NICKNAME
+
+## === Kontaktinfo für Fehlermeldungen (z. B. Abuse Reports) ===
+ContactInfo Admin <mail@domain.com>
+
+## === ControlPort: Schnittstelle für Tools wie Nyx / Steuerung ===
+ControlPort 9051
+CookieAuthentication 1
+
+## === Bandbreitenlimitierung ===
+RelayBandwidthRate 11520 KBytes     # 90 Mbit/s dauerhaft
+RelayBandwidthBurst 19200 KBytes    # 150 Mbit/s für kurze Bursts
+
+## === ExitPolicy: Kein Exit-Traffic erlauben (Middle-Only Relay!) ===
+ExitPolicy reject *:*
+
+## === Directory Mirror: Anderen Relays/Clients Tor-Metadaten bereitstellen ===
+DirPort 9030                      # Erlaubt, dass dein Node Verzeichnisdaten spiegelt
+
+## === Logging (optional, empfehlenswert) ===
+Log notice file /var/log/tor/notices.log
+
+# === (optional) Wenn du einen DNS-Namen für dein Relay hast ===
+Address relay.domain.com
+
+# === (optional) DataDirectory explizit setzen, sonst Standard (z. B. /var/lib/tor) ===
+DataDirectory /var/lib/tor
