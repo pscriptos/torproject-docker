@@ -4,6 +4,8 @@ services:
     container_name: tor-project
     hostname: tor-project
     network_mode: host
+    environment:
+      - TZ=Europe/Berlin
     ports:
       - "9001:9001"
       - "9030:9030"
