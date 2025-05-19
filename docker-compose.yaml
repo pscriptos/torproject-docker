@@ -3,6 +3,7 @@ services:
     image: repo.techniverse.net/docker-hosted/tor-docker:latest
     container_name: tor-project
     hostname: tor-project
+    network_mode: host
     ports:
       - "9001:9001"
       - "9030:9030"
