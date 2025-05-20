@@ -2,34 +2,34 @@
 
 RunAsDaemon 1
 
-## === ORPort: Annahme eingehender Verbindungen von anderen Relays ===
-ORPort 9001
+# === ORPort: Annahme eingehender Verbindungen von anderen Relays ===
+ORPort 9001 IPv4Only
 
-## === Nickname für dein Relay ===
+# === Nickname für Relay ===
 Nickname DEIN-NICKNAME
 
-## === Kontaktinfo für Fehlermeldungen (zum Beispiel Abuse Reports) ===
+# === Kontaktinfo für Fehlermeldungen (zum Beispiel Abuse Reports) ===
 ContactInfo Admin <mail@domain.com>
 
-## === ControlPort: Schnittstelle für Tools wie Nyx / Steuerung ===
+# === ControlPort: Schnittstelle für Tools wie Nyx / Steuerung ===
 ControlPort 9051
 CookieAuthentication 1
 
-## === Bandbreitenlimitierung ===
-RelayBandwidthRate 11520 KBytes     # 90 Mbit/s dauerhaft
-RelayBandwidthBurst 19200 KBytes    # 150 Mbit/s für kurze Bursts
+# === Bandbreitenlimitierung ===
+RelayBandwidthRate 4480 KBytes     # 35 Mbit/s dauerhaft
+RelayBandwidthBurst 6400 KBytes    # 50 Mbit/s für kurze Bursts
 
-## === ExitPolicy: Kein Exit-Traffic erlauben (Middle-Only Relay!) ===
+# === ExitPolicy ===
 ExitPolicy reject *:*
 
-## === Directory Mirror: Anderen Relays/Clients Tor-Metadaten bereitstellen ===
-DirPort 9030                      # Erlaubt, dass dein Node Verzeichnisdaten spiegelt
+# === Directory Mirror: Tor-Metadaten bereitstellen ===
+DirPort 9030
 
-## === Logging (optional, empfehlenswert) ===
+# === Logging ===
 Log notice file /var/log/tor/notices.log
 
-# === (optional) Wenn du einen DNS-Namen für dein Relay hast ===
+# === DNS-Namen für Relay hast ===
 Address relay.domain.com
 
-# === (optional) DataDirectory explizit setzen, sonst Standard (zum Beispiel /var/lib/tor) ===
+# === DataDirectory explizit setzen, sonst Standard (zum Beispiel /var/lib/tor) ===
 DataDirectory /var/lib/tor
