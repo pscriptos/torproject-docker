@@ -118,7 +118,8 @@ Privoxy kann als Proxy in Apps oder Browsern genutzt werden:
 
 ## 📚 Quellen & weiterführende Links
 
-- [Anleitung: Tor-Server in Docker](https://it-service-commander.de/tutorials/docker/tor-server-in-docker-container-auf-dem-vps-installieren/)
+- [Anleitung: Tor-Server in Docker auf CleverAdmin.de](hhttps://www.cleveradmin.de/blog/2025/06/tor-relay-docker-privoxy/)
+- [Anleitung: Tor-Server in Docker auf IT-Service-Commander.de](https://it-service-commander.de/tutorials/docker/tor-server-in-docker-container-auf-dem-vps-installieren/)
 - [Tor-Project in einer klassischen Installation](https://git.techniverse.net/scriptos/torproject)
 
 ---
