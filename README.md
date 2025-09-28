@@ -11,7 +11,8 @@ Dieses Repository stellt eine vollständige Docker-Umgebung bereit, um ein **Tor
 - Privoxy als lokaler Tor-Proxy
 - Nyx zur Überwachung direkt im Container enthalten
 - **Optionales Docker-Image verfügbar** über:  
-  `repo.techniverse.net/docker-hosted/tor-docker:latest`
+  `git.techniverse.net/scriptos/tor-docker:latest-privoxy`  
+  `git.techniverse.net/scriptos/tor-docker:0.4.8.18-privoxy`  
 
 ---
 
@@ -42,7 +43,7 @@ tor-proxy/
 ```yaml
 services:
   tor-privoxy:
-    image: repo.techniverse.net/docker-hosted/tor-docker:latest
+    image: git.techniverse.net/scriptos/tor-docker:latest-privoxy
     container_name: tor-project
     hostname: tor-project
     ports:
