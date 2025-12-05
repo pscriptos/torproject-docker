@@ -1,15 +1,16 @@
-FROM debian:bullseye
+FROM debian:bookworm
 
 RUN apt-get update && apt-get install -y \
     curl \
     gnupg2 \
-    apt-transport-https \
-    ca-certificates
+    ca-certificates \
+    apt-transport-https && \
+    rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://deb.torproject.org/torproject.org/A3C4F0F979CAA22CDBA8F512EE8CBC9E886DDD89.asc \
-    | gpg --dearmor -o /usr/share/keyrings/tor-archive-keyring.gpg
+    | gpg --dearmor -o /usr/share/keyrings/deb.torproject.org-keyring.gpg
 
-RUN echo "deb [signed-by=/usr/share/keyrings/tor-archive-keyring.gpg] https://deb.torproject.org/torproject.org bullseye main" \
+RUN echo "deb [signed-by=/usr/share/keyrings/deb.torproject.org-keyring.gpg] https://deb.torproject.org/torproject.org bookworm main" \
     > /etc/apt/sources.list.d/tor.list
 
 RUN apt-get update && apt-get install -y \
