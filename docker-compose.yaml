@@ -1,6 +1,6 @@
 services:
   tor-privoxy:
-    image: repo.techniverse.net/docker-hosted/tor-docker:latest
+    image: git.techniverse.net/scriptos/tor-docker:latest-privoxy
     container_name: tor-project
     hostname: tor-project
     network_mode: host
